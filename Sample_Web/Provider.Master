@@ -1,0 +1,259 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Provider.master.cs" Inherits="WMS_EGL.Provider" %>
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <!-- META SECTION -->
+        <title>Sample Web  Page</title>            
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <!-- END META SECTION -->
+        
+        <!-- CSS INCLUDE -->        
+        <link rel="stylesheet" type="text/css" id="theme" href="/resources/css/theme-default.css?122"/>
+                      
+    </head>
+    <body>
+        <!-- START PAGE CONTAINER -->
+        <div class="page-container page-navigation-top page-navigation-top-custom">            
+            <!-- PAGE CONTENT -->
+            <div class="page-content">
+                
+                <!-- START PAGE CONTENT HEADER -->
+                <!--div class="page-content-header">
+                    <a href="/dashboard.aspx" class="logo"></>
+                    <a href="/dashboard.aspx">Provider Portal</a>
+                    <div class="pull-right">                        
+                        <div class="socials">
+                            <a href="#"><span class="fa fa-facebook-square"></span></a>
+                            <a href="#"><span class="fa fa-twitter-square"></span></a>
+                            <a href="#"><span class="fa fa-pinterest-square"></span></a>
+                            <a href="#"><span class="fa fa-linkedin-square"></span></a>
+                            <a href="#"><span class="fa fa-dribbble"></span></a>                                                      
+                        </div>
+                        <div class="contacts">
+                            <a href="#"><span class="fa fa-envelope"></span> johndoe@domain.com</a>
+                            <a href="#"><span class="fa fa-phone"></span> +9(876) 543-21-09</a>
+                            <a href="#"><span class="fa fa-skype"></span> JohnDoe</a>
+                        </div>
+                    </div>
+                </!--div>
+                <!-- END PAGE CONTENT HEADER -->
+                
+                <!-- START X-NAVIGATION VERTICAL -->
+                <ul class="x-navigation x-navigation-horizontal">
+                 <li class="xn-logo" style="background-color:pink;">
+                        <a href="#"><img src="https://cdn.shopify.com/s/files/1/0930/8720/files/logo-white_200x.png?v=1482189770" style="width: 150px; margin-top: -12px;" /></a>
+                        <a href="#" class="x-navigation-control"></a>
+                    </li>
+                    <li class="xn-openable">
+                        <a href="#"><span class="fa fa-files-o"></span> <span class="xn-text">Shipping</span></a>
+                        <ul class="animated zoomIn">
+                            <li><a href="/Order/OrderRequest.aspx"><span class="fa fa-inbox"></span> Shipping Request</a></li>
+                            <li><a href="/Order/OrderList.aspx"><span class="fa fa-spinner"></span>Shipping Lists</a></li>
+                        </ul>
+                    </li>
+                     <li class="xn-openable">
+                        <a href="#"><span class="fa fa-book"></span> <span class="xn-text">Receiving</span></a>                        
+                        <ul class="animated zoomIn">
+                             <li><a href="/Receiving/receiving.aspx"><span class="fa fa-upload"></span> Receiving Request</a></li>
+                             <li><a href="/Receiving/receivingList.aspx"><span class="fa fa-list-alt"></span> Receiving Lists</a></li>
+                  
+                       
+                         </ul>
+                    </li>      
+                    <li class="xn-openable">
+                           <a href="/inventory/productlist.aspx"><span class="fa fa-clipboard "></span> <span class="xn-office">Inventory</span></a>
+
+                       
+                    </li>                    
+                  
+                     <li class="xn-openable">
+                        <a href="/WareHouse/warehouselist.aspx"><span class="fa fa-building-o "></span> <span class="xn-office">WareHouse</span></a>
+                    </li>
+                       <li class="xn-openable">
+                        <a href="#"><span class="fa fa-cogs"></span> <span class="xn-text">Settings</span></a>
+                        <ul class="animated zoomIn">
+                            <li><a href="/Settings/memberlist.aspx"><span class="fa fa-users"></span> Member</a></li>
+                            <li><a href="/Settings/customerlist.aspx"><span class="fa fa-gear"></span>Customer</a></li>
+                        </ul>
+                    </li>
+                    <!-- POWER OFF -->
+                    <li class="xn-icon-button pull-right last">
+                        <a href="#"><span class="fa fa-power-off"></span></a>
+                        <ul class="xn-drop-left animated zoomIn">
+                             <li><a href="/Security/LogOut.aspx" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Sign Out</a></li>
+                        </ul>                        
+                    </li> 
+                    <!-- END POWER OFF -->                                       
+                    <!-- SEARCH -->
+                    <!-- END SEARCH -->                     
+                </ul>
+                <!-- END X-NAVIGATION VERTICAL -->                     
+                
+                <!-- START BREADCRUMB -->
+                <!-- END BREADCRUMB -->         
+                <!-- Page Content -->       
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+                <!-- Page Content -->
+                <!-- PAGE CONTENT WRAPPER -->                
+            </div>            
+            <!-- END PAGE CONTENT -->
+        </div>
+        <!-- END PAGE CONTAINER -->
+
+        <!-- MESSAGE BOX-->
+        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
+                    <div class="mb-content">
+                        <p>Are you sure you want to log out?</p>                    
+                        <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <div class="pull-right">
+                            <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
+                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MESSAGE BOX-->
+          <div class="message-box message-box-danger animated fadeIn" id="message-box-danger">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-times"></span> DANGER!</div>
+                    <div class="mb-content" id="msgDanger">
+                        <p></p>                    
+                    </div>
+                    <div class="mb-footer">
+                        <button class="btn btn-default btn-lg pull-right mb-control-close" onclick="$('#message-box-danger').hide();">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="message-box message-box-success animated fadeIn" id="message-box-success">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-check"></span> Success</div>
+                    <div class="mb-content" id="msgSuccess">
+                        <p></p>
+                    </div>
+                    <div class="mb-footer">
+                        <button class="btn btn-default btn-lg pull-right mb-control-close" onclick="$('#message-box-success').hide();">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal animated fadeIn" id="modal_sms" tabindex="-1" role="dialog" aria-labelledby="MessageModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="MessageModal">Send SMS Message</h4>
+                </div>
+                     <div class="modal-body form-horizontal form-group-separated">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Mobile Phone#</label>
+                            <div class="col-md-4">
+                                  <input type="text" class="form-control" id="md_Modal_Phone" name="md_Modal_Phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Message</label>
+                            <div class="col-md-6">
+                                <textarea class="form-control" id="md_Modal_Message" name="md_Modal_Message" rows="7" style="resize: none;" maxlength="255"></textarea>
+                            </div>
+                      
+                    </div>
+                   <div class="modal-body">
+                    <div class="text-center" id="md_modal_message_max"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" id="btnFileUpload">Send Message</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+         <div class="modal animated fadeIn" id="modal_change_password" tabindex="-1" role="dialog" aria-labelledby="smallChgPassword" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="smallChgPassword">Change password</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Change Password Request.</p>
+                    </div>
+                    <div class="modal-body form-horizontal form-group-separated">                        
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Current Password</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" name="old_password"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Request</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>        
+      
+ 
+<!-- START SCRIPTS -->
+        <!-- START PLUGINS -->
+             <script type="text/javascript" src="/resources/js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="/resources/js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/resources/js/plugins/bootstrap/bootstrap.min.js"></script>        
+        <!-- END PLUGINS -->
+        <script type='text/javascript' src='/resources/js/plugins/noty/jquery.noty.js'></script>
+        <script type='text/javascript' src='/resources/js/plugins/noty/layouts/center.js'></script>
+        <script type='text/javascript' src='/resources/js/plugins/noty/layouts/topCenter.js'></script>
+        <script type='text/javascript' src='/resources/js/plugins/noty/themes/default.js'></script>
+
+        <!-- THIS PAGE PLUGINS -->
+        <script type='text/javascript' src='/resources/js/plugins/icheck/icheck.min.js'></script>
+        <script type="text/javascript" src="/resources/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <!-- END PAGE PLUGINS -->       
+
+        <!-- START TEMPLATE -->
+        <script type="text/javascript" src="/resources/js/actions.js"></script>    
+        <script type='text/javascript' src='/resources/js/plugins/maskedinput/jquery.maskedinput.min.js'></script>   
+        <script type="text/javascript" src="/resources/serverside/serverside.js?v1"></script>    
+         <script src="https://js.pusher.com/3.0/pusher.min.js"></script>
+          <script>
+              // Enable pusher logging - don't include this in production
+              Pusher.log = function (message) {
+                  if (window.console && window.console.log) {
+                      window.console.log(message);
+                  }
+              };
+
+              var pusher = new Pusher('3e7203fb3fcff20efde3', {
+                  encrypted: true
+              });
+              var channel = pusher.subscribe('CloudDispatcher_Global');
+              channel.bind('my_event', function (data) {
+                  alert(data.message);
+              });
+          </script>
+       <asp:ContentPlaceHolder ID="head" runat="server">
+         
+    </asp:ContentPlaceHolder> 
+        <!-- END TEMPLATE -->
+    <!-- END SCRIPTS -->         
+    </body>
+</html>
+
+ 
